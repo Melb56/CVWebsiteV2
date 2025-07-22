@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+    --color1: #FFFFFF;
+    --color2: #181818;
+    --color3: #EFC6FD;
+    --color4: #A5CCFF;
+
+}
+
+
+* {
+    font-family: Arial, Calibri, sans-serif;
+    margin: 0px;
+}
+
+body {
+    background-color: var(--color2);
+    font-size: 1rem;
+    color: var(--color1);
+}
+
+@font-face {
+    font-family: Acme;
+    src: url('/font/Acme-Regular.ttf');
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    font-family: "Acme", sans-serif;
+    margin-bottom: 1rem;
+
+}
+h1::before {
+    content: "";
+    display: absolute;
+    width: 20%;
+    height: 2px;
+    top: 20px;
+    background-color: var(--color3);
+    margin: 1rem 2rem;
+}
+h1::after {
+    content: "";
+    display: absolute;
+    width: 20%;
+    height: 2px;
+    top: 20px;
+    background-color: var(--color3);
+    margin: 1rem 2rem;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--color3);
+    font-weight: bold;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+
+    /*Fade-in sections*/
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section {
+    margin: 50px 80px 50px 80px;
+} 

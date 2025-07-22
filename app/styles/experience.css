@@ -1,0 +1,80 @@
+#experience {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-exp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 5rem;
+}
+
+.experience {
+    position: relative;
+    max-width: 600px;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    left: -1%;
+    width: 2px;
+    background: var(--color1);
+    top: 0;
+    bottom: 0;
+    transform: translatex(-50%);
+}
+
+.work::before {
+    height: 60%;
+}
+
+.container {
+    position: relative;
+    box-sizing: border-box;
+    color: var(--color2);
+    background: var(--color4);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: justify;
+    box-shadow: 10px 10px 20px rgb(165 204 255/ 20%);
+}
+
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -23px;
+    width: 16px;
+    height: 16px;
+    background: var(--color4);
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+.title-exp {
+    display: flex;
+    align-items: center;
+}
+
+.title-exp img {
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+
+}
+
+.diploma {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.date {
+    font-style: italic;
+}
