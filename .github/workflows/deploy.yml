@@ -27,7 +27,7 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.4
         with:
-          server: ${{ secrets.ftp://92.113.24.73 }}
+          server: ${{ secrets.ftp://melanie-bruzac.fr }}
           username: ${{ secrets.u121193288 }}
           password: ${{ secrets.3#qT5zLk8vPn }}
           server-dir: public_html/
