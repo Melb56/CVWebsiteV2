@@ -2,15 +2,18 @@
 
 import React from 'react';
 import '../styles/footer.css';
+import Linkedin from './Linkedin';
 
 const Footer: React.FC = () => {
   return (
     <footer>
-        <a href="https://fr.linkedin.com/in/m%C3%A9lanie-bruzac">
-        <img src="img/linkedin-full.svg" alt="Linkedin" /></a>
+      <div className='footer'>
+         <Linkedin/>
         <p>
            &copy; Mélanie Bruzac 2025
         </p>
+      </div>
+       
             
     </footer>
              

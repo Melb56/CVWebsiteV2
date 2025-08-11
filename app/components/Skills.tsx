@@ -1,157 +1,282 @@
 'use client'
 
-import Image from 'next/image'
-import React, { useEffect } from 'react'
+import Image from 'next/image';
 import '../styles/skills.css'
 
 const Skills: React.FC = () => {
-    useEffect(() => {
-    const toggleButton = document.getElementById('toggle-skills');
-    const collapsibleSections = document.querySelectorAll('.collapsible');
-
-    if (!toggleButton) return;
-
-    const handleClick = () => {
-      collapsibleSections.forEach((section) => {
-        section.classList.toggle('expanded');
-      });
-
-      toggleButton.textContent = toggleButton.textContent === '+' ? '-' : '+';
-    };
-
-    toggleButton.addEventListener('click', handleClick);
-
-    return () => {
-      toggleButton.removeEventListener('click', handleClick);
-    };
-  }, []);
 
 
   return (
     <section id="skills" className="fade-in">
-      <h1>Mes compétences</h1>
+      <h1 data-aos="fade-down" data-aos-duration="1500">Mes compétences</h1>
 
-      <div className="skills">
-        {/* Développement Web */}
-        <div className="container-skills dev">
-          <div className="tech-container collapsible">
-            <h2>Développement web</h2>
-
-            {/* Front */}
-            <div className="stack">
-              <h4>FRONT</h4>
-              <p>Création et intégration de sites web responsive, modernes et sécurisés.</p>
-              <div className="container-img tech">
-                {[
-                  { src: 'html-5.svg', label: 'HTML' },
-                  { src: 'css.svg', label: 'CSS' },
-                  { src: 'bootstrap.svg', label: 'Bootstrap' },
-                  { src: 'sass.svg', label: 'SASS' },
-                  { src: 'tailwind.svg', label: 'Tailwind' },
-                  { src: 'javascript.svg', label: 'Javascript' },
-                  { src: 'react.svg', label: 'React' },
-                ].map(({ src, label }) => (
-                  <div className="image" key={label}>
-                    <Image src={`/img/Skills/${src}`} alt={label} width={50} height={50} />
-                    <div className="overlay"><p>{label}</p></div>
-                  </div>
-                ))}
+      <div className='skills'>
+          {/* Front-end */}
+        <div className='container-skills' data-aos="fade-right" data-aos-duration="1500">
+          <h2>Front-end</h2>
+          <p>Création et intégration de sites web responsive, moderne et sécurisé.</p>
+          <div className='container-img fbop'>
+            <div className='image'>
+              <Image
+                src="/img/Skills/html.svg"
+                alt="HTML"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>HTML</p>
               </div>
             </div>
+            <div className='image'>
+            <Image
+              src="/img/Skills/css.svg"
+              alt="CSS"
+              width={90}
+              height={90}/>
+              <div className='overlay'>
+                <p>CSS</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/bootstrap.svg"
+                alt="Boostratp"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Bootstrap</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/scss.svg"
+                alt="SCSS"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>SCSS</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/tailwind.svg"
+                alt="Tailwind"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Tailwind</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/javascript.svg"
+                alt="JS"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Javascript</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/typescript.svg"
+                alt="TS"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Typecript</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/react.svg"
+                alt="React"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>React.js</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/next.svg"
+                alt="Next"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Next.js</p>
+              </div>
 
-            {/* Back */}
-            <div className="stack">
-              <h4>BACK</h4>
-              <p>Création et gestion de données (CRUD).</p>
-              <div className="container-img tech">
-                {[
-                  { src: 'php.svg', label: 'PHP' },
-                  { src: 'symfony.svg', label: 'Symfony' },
-                  { src: 'mysql.svg', label: 'MySQL' },
-                  { src: 'mariadb.svg', label: 'MariaDB' },
-                  { src: 'xampp.svg', label: 'Xampp' },
-                  { src: 'nodejs.svg', label: 'Nodejs' },
-                ].map(({ src, label }) => (
-                  <div className="image" key={label}>
-                    <Image src={`/img/Skills/${src}`} alt={label} width={50} height={50} />
-                    <div className="overlay"><p>{label}</p></div>
-                  </div>
-                ))}
+            </div>
+          </div>
+        </div>
+
+          {/* Back-end */}
+        <div className='container-skills' data-aos="fade-left" data-aos-duration="1500">
+          <h2>Back-end</h2>
+          <p>Création et gestion de données (CRUD).</p>
+          <div className='container-img back'>
+            <div className='image'>
+              <Image
+                src="/img/Skills/php.svg"
+                alt="PHP"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>PHP</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/symfony.svg"
+                alt="Symfony"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Symfony</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/mysql.svg"
+                alt="MySQL"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>MySQL</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/nodejs.svg"
+                alt="Node"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Node.js</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/xampp.svg"
+                alt="Xampp"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Xampp</p>
               </div>
             </div>
           </div>
-          <button id="toggle-skills">+</button>
         </div>
 
-        {/* Web Design */}
-        <div className="container-skills box">
-          <h2>Web design</h2>
-          <p>Création de maquettes et de prototypes responsives et centrées utilisateur.</p>
-          <div className="container-img">
-            {[
-              { src: 'figma.svg', label: 'Figma' },
-              { src: 'canva.svg', label: 'Canva' },
-            ].map(({ src, label }) => (
-              <div className="image" key={label}>
-                <Image src={`/img/Skills/${src}`} alt={label} width={50} height={50} />
-                <div className="overlay"><p>{label}</p></div>
+          {/* Outils & Platformes */}
+        <div className='container-skills' data-aos="fade-right" data-aos-duration="1500">
+          <h2>Outils & Platformes</h2>
+          <p>Versionnage des projet, création de maquettes et de prototypes, responsives et centrées utilisateur, création et édition de thèmes Wordpress. </p>
+          <div className='container-img fbop'>
+            <div className='image'>
+              <Image
+                src="/img/Skills/figma.svg"
+                alt="Figma"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Figma</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/canva.svg"
+                alt="Canva"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Canva</p>
+              </div>
 
-      <div className="skills">
-        {/* CMS */}
-        <div className="container-skills">
-          <h2>CMS</h2>
-          <p>Création et édition de thèmes Wordpress.</p>
-          <div className="container-img CMS">
-            <div className="image">
-              <Image src="/img/Skills/wordpress.svg" alt="Wordpress" width={50} height={50} />
-              <div className="overlay"><p>Wordpress</p></div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/git.svg"
+                alt="Git"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Git</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/github.svg"
+                alt="GH"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>GitHub</p>
+              </div>
+            </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/wordpress.svg"
+                alt="WP"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Wordpress</p>
+              </div>
             </div>
           </div>
+
         </div>
 
-        {/* Environnement de travail */}
-        <div className="container-skills">
-          <h2>Environnement de travail</h2>
-          <div className="container-img">
-            {[
-              { src: 'git.svg', label: 'Git' },
-              { src: 'github.svg', label: 'GitHub' },
-              { src: 'xampp.svg', label: 'Xampp' },
-              { src: 'icons8-code-studio-visuel-2019.svg', label: 'VSCode' },
-            ].map(({ src, label }) => (
-              <div className="image" key={label}>
-                <Image src={`/img/Skills/${src}`} alt={label} width={50} height={50} />
-                <div className="overlay"><p>{label}</p></div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Langues */}
-        <div className="container-skills">
+          {/* Langues */}
+        <div className='container-skills' data-aos="fade-left" data-aos-duration="1500">
           <h2>Langues</h2>
-          <div className="container-img">
-            {[
-              { src: 'france.png', label: 'maternelle' },
-              { src: 'royaume-uni.png', label: 'intermédiaire<br />TOEIC : 840' },
-              { src: 'japon.png', label: 'débutant' },
-              { src: 'allemand.png', label: 'débutant' },
-            ].map(({ src, label }, idx) => (
-              <div className="image" key={idx}>
-                <Image src={`/img/Flags/${src}`} alt="Langue" width={50} height={50} />
-                <div className="overlay">
-                  <p dangerouslySetInnerHTML={{ __html: label }} />
+          <div className='container-img langues'>
+              <div className='image'>
+                <Image
+                  src="/img/Flags/france.png"
+                  alt="français"
+                  width={90}
+                  height={100}/>
+                <div className='overlay'>
+                  <p>français</p>
                 </div>
               </div>
-            ))}
+              <div className='image'>
+                <Image
+                  src="/img/Flags/royaume-uni.png"
+                  alt="UK"
+                  width={90}
+                  height={100}/>
+                <div className='overlay'>
+                  <p>anglais <br /> TOEIC : 840 pts</p>
+                </div>
+              </div>
+              <div className='image'>
+                <Image
+                  src="/img/Flags/japon.png"
+                  alt="japon"
+                  width={90}
+                  height={100}/>
+                <div className='overlay'>
+                  <p>japonais</p>
+                </div>
+              </div>
+              <div className='image'>
+                <Image
+                  src="/img/Flags/allemand.png"
+                  alt="allemand"
+                  width={90}
+                  height={100}/>
+                <div className='overlay'>
+                  <p>allemand</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+          
       </div>
+ 
     </section>
   )
 }

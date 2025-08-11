@@ -49,6 +49,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
 } */
 
 #portfolio {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,124 +57,206 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     padding: 1rem;
 }
 
 .card {
+    position: relative;
     display: flex;
     align-items: center;
-    height: 450px;
-    width: 500px;
+    justify-content: center;
+    width: 18rem;
+    height: 18rem;
     margin: 1rem;
-    box-shadow: 5px 5px 20px  rgba(255, 255, 255, 0.51);
+    box-shadow: 5px 5px 20px  rgba(26, 26, 26, 0.50);
     overflow: hidden;
     background: var(--color2);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px; 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 8px 8px 25px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
 }
 
 #dailybooks {
     background-image: url(/img/Portfolio/LogoDB.png); 
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;   
+    background-color: #daf2dc; 
 }
 
 #Flotti {
-    background-image: url(/img/Portfolio/Flotti.png); 
+    background-image: url(/img/Portfolio/Flottibulle.png); 
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;   
+    background-color: #c8e8fa; 
 }
 #MB {
-    background-image: url(/img/Portfolio/MB.png);
+    background-image: url(/img/Portfolio/LogoMB2.png);
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;   
+    background-color: #efc6fd; 
 }
+#MB1 {
+    background-image: url(/img/Portfolio/LogoMB1.png);
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;   
+    background-color: #c99f83; 
+}
+#MB3 {
+    background-image: url(/img/Portfolio/LogoMB3.png);
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;   
+    background-color: var(--color3); 
+} 
 #QA {
-    background-image: url(/img/Portfolio/QA.png);
+    background-image: url(/img/Portfolio/QuaiAntique.png);
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;   
+    background-color: #4b322a; 
 }
 #GVP {
     background-image: url(/img/Portfolio/GarageVParrot.png);
     background-size: auto;
 }
 
-.img-project {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-}
-
-.intro h4 {
-    color: var(--color1);
-}
-
-.intro p {
-    color: var(--color1);
-    
-}
-
 .intro {
-    height: auto;
-    width: 100%;
-    box-sizing: border-box;
     position: absolute;
-    background: rgb(24, 24, 24, 0.2);
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: inherit;
     color: var(--color2);
-    top: 400px; 
-    transition: .5s;
-}
-.card:hover .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 450px;
-    top: 0px;
-    bottom: 0px;
-    padding: 0.5rem;
-    background: rgb(24, 24, 24, 0.6);
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease, background 0.4s ease;
 }
 
-.intro ul {
-    /* list-style: none; */
-    margin: 20px;
-    visibility: hidden;
-    opacity: 0;
-}
-.card:hover ul {
-    color: var(--color1);
+.card:hover .intro {
     opacity: 1;
     visibility: visible;
+    background: rgba(26, 26, 26, 0.7);
+    box-sizing: border-box;
+    border-radius: inherit;
+
 }
 
-.tags li{
-    list-style: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 0rem 1rem 0rem 0rem;
-    padding: 0.3rem;
-    background: var(--color4);
-    border-radius: 5px;
+
+.intro h4,
+.intro p {
+    color: var(--color1);
+    text-align: center;
+    margin: 1rem 0;
 }
 
 .tags {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 
-.intro a {
-    text-decoration: none;
-    color: var(--color1);
-    background: var(--color3);
-    padding: 0.5rem;
-    border-radius: 50px;
-}
-.intro a:hover{
-    transform: scale(1.2);
-    font-weight:bold ;
+.tags li{
+        list-style: none;
+        text-transform: uppercase;
+        background: var(--accent);
+        border-radius: 5px;
+        padding: 0.3rem 0.5rem;
+        color: var(--color1);
+        font-size: 0.8rem;
 }
 
-.card:hover {
+.btnPlus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.see-more-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color4);
+    color: var(--color2);
+    font-weight: bold;
+    border: none;
+    border-radius: 100%;
     cursor: pointer;
+    transition: transform 0.5s ease, background 0.5s ease;
+    box-shadow: 0 1px 2px 0 rgba(26, 26, 26, .3), 0 1px 3px 1px rgba(26, 26, 26, .15);
+}
+
+.see-more-btn:hover {
+    background-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(26,26,26,0.15);
+}
+
+.tasks li {
+    list-style: disc;
+}
+
+.btn-projet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-projet button {
+    background-color: var(--color1);
+    border-radius: 5px;
+    font-weight: bold ;
+    padding: 0.4rem 0.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: 0 1px 2px 0 rgba(26, 26, 26, .3), 0 1px 3px 1px rgba(26, 26, 26, .15);
+    transition: transform 0.5s ease;
+}
+
+.btn-projet button:hover {
+    background-color: var( --accent) ;
+    color: var(--color1);
+    transform: translateY(-5px);
+    transition: 0.5s ease;
+    box-shadow: 0 6px 10px rgba(26,26,26,0.15);
 }
 
 
+.portfolio-img Image {
+    cursor: pointer;
+    transition: all 10s ease;
+}
+
+
+@media (max-width: 320px) {
+  .card {
+    width: 15rem;
+    height: 23rem;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+}

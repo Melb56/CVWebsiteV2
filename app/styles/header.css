@@ -1,70 +1,13 @@
-h1 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    font-size: 2em;
-    font-family: "Acme", sans-serif;
-    margin-bottom: 1rem;
 
-}
-h1::before {
-    content: "";
-    display: absolute;
-    width: 20%;
-    height: 2px;
-    top: 20px;
-    background-color: var(--color3);
-    margin: 1rem 2rem;
-}
-h1::after {
-    content: "";
-    display: absolute;
-    width: 20%;
-    height: 2px;
-    top: 20px;
-    background-color: var(--color3);
-    margin: 1rem 2rem;
-}
-
-h2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding-bottom: 1.5rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-h4 {
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-    color: var(--color3);
-    font-weight: bold;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
-
-h5 {
-    font-weight: bold;
-}
 
 #navbar {
-    box-shadow: 0 4px 4px hsla(0, 0%, 9%, 1);
+    /* box-shadow: 0 4px 4px #0000002e;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
-    /* transition: 0.2s ease; */
     transition: height 0.3s ease;
+     */
 }
 
 .logo {
@@ -72,31 +15,43 @@ h5 {
     align-items: center;
     color: var(--color3);
     font-size: 2rem;
-    font-family: "Acme", sans-serif;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--color2);
+    font-family: "Angelina", sans-serif;
 }
 
 
-.nav-link {
-    color: var(--color1);
+.block {
+    color: var(--color2);
+    text-decoration: none;
 }
 
-.nav-link:hover {
+.block:hover {
     font-weight: bold;
-    color: var(--color4);
+    color: var(--accent);
 }
 
-.navbar-toggler-icon {
-    background-image: url('/img/menu.svg');
-}
-
- .navbar-toggler {
-    background: var(--color3);
-}
-
-.container-fluid {
-    display: flex;
-    align-items: center;
+.container {
+    color: var(--color2);
+    /* background: var(--color4); */
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 
-    
+@media (max-width: 768px) {
+  .header {
+    margin-top: 15rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    margin-top: 18rem;
+  }
+}

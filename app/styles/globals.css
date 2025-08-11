@@ -1,39 +1,63 @@
 @import "tailwindcss";
 
-:root {
-    --color1: #FFFFFF;
-    --color2: #181818;
-    --color3: #EFC6FD;
-    --color4: #A5CCFF;
 
+
+:root {
+    --color1: #F8F9FA;
+    --color2: #1A1A1A;
+    --color3: #E3F0FF;
+    --color4: #A5CCFF;
+    --accent:#4A90E2;
 }
+
+
 
 
 * {
-    font-family: Arial, Calibri, sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0px;
+    scroll-behavior: smooth;
+    
 }
 
 body {
-    background-color: var(--color2);
     font-size: 1rem;
-    color: var(--color1);
+    color: var(--color2);
+    
+    
+}
+
+.bg-custom {
+    background-color: var(--color1);
 }
 
 @font-face {
-    font-family: Acme;
-    src: url('/font/Acme-Regular.ttf');
+    font-family: 'Nunito';
+    src: url('/font/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NunitoBold';
+    src: url('/font/Nunito-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Angelina';
+    src: url('/font/angelina.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 h1 {
     display: flex;
     justify-content: center;
-    /* align-content: center; */
     text-align: center;
     width: 100%;
-    font-size: 2em;
-    font-family: "Acme", sans-serif;
-    margin-bottom: 1rem;
+    font-family: 'NunitoBold', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem; 
 
 }
 h1::before {
@@ -43,7 +67,7 @@ h1::before {
     height: 2px;
     top: 20px;
     background-color: var(--color3);
-    margin: 1rem 2rem;
+    margin: 1.5rem 2rem;
 }
 h1::after {
     content: "";
@@ -52,7 +76,7 @@ h1::after {
     height: 2px;
     top: 20px;
     background-color: var(--color3);
-    margin: 1rem 2rem;
+    margin: 1.5rem 2rem;
 }
 
 h2 {
@@ -86,18 +110,14 @@ h5 {
 }
 
 
-    /*Fade-in sections*/
-.fade-in {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 section {
-    margin: 50px 80px 50px 80px;
-} 
+    margin: 5rem 0;
+}
+
+
+
+
+
+

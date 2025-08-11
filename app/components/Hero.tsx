@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import Image from 'next/image';
 import '../styles/hero.css';
+import Linkedin from './Linkedin';
 
 const Hero: React.FC = () => {
   const typedRef = useRef<HTMLDivElement>(null)
@@ -11,7 +12,6 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const options = {
       strings: [
-        'Développeuse front-end junior',
         'Créative',
         'Motivée',
         'Bienvenue !',
@@ -30,33 +30,31 @@ const Hero: React.FC = () => {
   }, [])
 
   return (
-    <div id="hero-area" className="fade-in">
-      <div className="hero-content">
+    <div id="hero-area" >
+      <div className="hero-content" data-aos="fade-right" data-aos-duration="1500">
         <p>Bonjour, je suis</p>
         <p className="title-hero">Mélanie Bruzac</p>
-
+        <p className="job">Développeuse front-end junior</p>
         <div id="typed-output" ref={typedRef}></div>
 
-        <a
-          href="https://fr.linkedin.com/in/m%C3%A9lanie-bruzac"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="img/linkedin-full.svg"
-            alt="LogoLinkedin"
-            width={50}
-            height={50}
-          />
-        </a>
+        <Linkedin/>
 
         <a
           className="btn"
-          href="public\img\CV-DevWebFE_MelanieBruzac.pdf"
+          href="/CV_DevFront_MelanieBruzac.pdf"
           download="CV-DevWeb_MelanieBruzac.pdf"
         >
           Télécharger mon CV
         </a>
+      </div>
+
+      <div className="img-hero" data-aos="zoom-in-left" data-aos-duration="1500">
+        <Image
+            src="/img/hero-img.svg"
+            alt="Icône hero"
+            width={1000}
+            height={1000}
+        />
       </div>
     </div>
   )

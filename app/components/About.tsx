@@ -6,8 +6,8 @@ import '../styles/about.css';
 
 export default function About() {
   return (
-    <section className="about fade-in" id="about">
-      <div className="card-about">
+    <section className="about" id="about">
+      <div className="card-about" data-aos ="zoom-in-right" data-aos-duration="1500">
         <div className="card-img">
           <div className="about-img">
             <Image
@@ -20,7 +20,7 @@ export default function About() {
           </div>
           <div className="about-text">
             <p>Mélanie Bruzac</p>
-            <p>Développeuse front-end</p>
+            <p>Développeuse front-end junior</p>
             <p>Bretagne</p>
             <p>Permis B</p>
             <p>Hobbies : lecture, cuisiner, voyager</p>
@@ -29,8 +29,8 @@ export default function About() {
       </div>
 
       <div className="container-about">
-        <h1>À propos</h1>
-        <p>
+        <h1 className='titre'  data-aos ="fade-left" data-aos-duration="1000">À propos</h1>
+        <p  data-aos ="fade-left" >
           Titulaire d’un titre professionnel de Développeur Web Full Stack, je suis à la
           recherche de ma première expérience professionnelle dans le développement web
           front-end. Je souhaite intégrer une entreprise où je pourrai non seulement mettre à
@@ -43,12 +43,13 @@ export default function About() {
         <div className="btnAbout">
           <a
             className="btn"
-            href="/img/CV-DevWebFE_MelanieBruzac.pdf"
+            href="/CV_DevFront_MelanieBruzac.pdf"
             download="CV-DevWeb_MelanieBruzac.pdf"
+            data-aos ="fade-left" 
           >
             Télécharger mon CV
           </a>
-          <Link className="btn" href="#contact">
+          <Link className="btn" href="#contact"  data-aos ="fade-left" >
             Me contacter
           </Link>
         </div>

@@ -1,59 +1,84 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/header.css';
+import Image from "next/image";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const navbarRef = useRef<HTMLElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const navbar = navbarRef.current;
-      if (!navbar) return;
+      setIsScrolled(window.scrollY >= 50)
+    }
 
-      if (window.scrollY < 50) {
-        navbar.style.height = '70px';
-      } else {
-        navbar.style.height = '40px';
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-        return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
 
   return (
-    <nav ref={navbarRef} id="navbar" className="navbar navbar-expand-lg">
-      <div className="container-fluid">
+    <nav ref={navbarRef} id="navbar" className={`fixed top-3 w-full transition-all duration-300 z-50 ${isScrolled ? 'h-10' : 'h-16'} flex justify-center items-center`}>
+      <div className={`container mx-auto flex items-center justify-between h-full px-4 ${
+    isScrolled
+      ? 'bg-[rgba(165,204,255,0.7)]'
+      : 'bg-[#A5CCFF]'
+  }`}>
         {/* Logo */}
-        <div className="logo">Mélanie Bruzac</div>
+        <div className=" logo text-xl font-bold cursor-pointer select-none"><a href="#hero-area">Mélanie Bruzac</a></div>
 
-        {/* Bouton pour le menu responsive */}
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="lg:hidden focus:outline-none"
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
-          <span className="navbar-toggler-icon"></span>
+          <svg
+            className="w-10 h-10 text-black-700"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
         </button>
 
-        {/* navbar */}
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <a className="nav-link" href="#about">À propos</a>
-            <a className="nav-link" href="#skills">Compétences</a>
-            <a className="nav-link" href="#experience">Scolarité & Expériences professionnelles</a>
-            <a className="nav-link" href="#portfolio">Projets</a>
-            <a className="nav-link" href="#contact">Contact</a>
-          </div>
+        <div
+          className={`${
+            menuOpen ? 'block' : 'hidden'
+          }  lg:flex header ${
+    isScrolled
+      ? 'bg-[rgba(165,204,255,0.7)] lg:bg-transparent'
+      : 'bg-[#A5CCFF] lg:bg-transparent'
+  }`}>
+          <a href="#about" className="block px-3 py-2 " onClick={() => setMenuOpen(false)}>
+            À propos
+          </a>
+          <a href="#skills" className="block px-3 py-2" onClick={() => setMenuOpen(false)}>
+            Compétences
+          </a>
+          <a href="#portfolio" className="block px-3 py-2" onClick={() => setMenuOpen(false)}>
+            Projets
+          </a>
+          <a href="#experience" className="block px-3 py-2" onClick={() => setMenuOpen(false)}>
+            Scolarité & Expériences professionnelles
+          </a>
+          <a href="#contact" className="block px-3 py-2" onClick={() => setMenuOpen(false)}>
+            Contact
+          </a>
         </div>
       </div>
     </nav>
