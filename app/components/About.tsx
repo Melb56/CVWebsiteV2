@@ -15,7 +15,6 @@ export default function About() {
               alt="Photo de profil"
               width={300}
               height={300}
-              className="img-fluid"
             />
           </div>
           <div className="about-text">
