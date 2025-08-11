@@ -19,21 +19,11 @@ const Contact: React.FC = () => {
         <div className="contact"> 
           <div className="info" data-aos="fade-right" data-aos-duration="1500">
             <div className="contact-info">
-              <Image
-                src="img/Contact/email.svg"
-                alt="LogoEmail"
-                width={300}
-                height={300}
-              />
+              <img src="img/Contact/email.svg" alt="LogoEmail"/>
               <a href="mailto:melanie.bruzac@gmail.com">melanie.bruzac@gmail.com</a>
             </div>
             <div className="contact-info">
-              <Image
-                src="img/Contact/linkedin.svg"
-                alt="LogoLinkedin"
-                width={300}
-                height={300}
-              />
+              <img src="img/Contact/linkedin.svg" alt="LogoLinkedin"/>
               <a href="https://www.linkedin.com/in/melaniebruzac">www.linkedin.com</a>
             </div>
             <div className="contact-info">
