@@ -44,7 +44,7 @@ const Experience: React.FC = () => {
             <ul>
               <li>Employée de ménage chez les particuliers, entreprises, cabinets et écoles.</li>
               <li>ASEM en Moyenne et Grande section, école St Anne Kervignac</li>
-              <li>Agent des écoles : surveillance des enfants sur l'heure du midi</li>
+              <li>Agent des écoles : surveillance des enfants sur l&apos;heure du midi</li>
               <li>Distribution de prospectus</li>
             </ul>
           </div>
@@ -118,12 +118,12 @@ const Experience: React.FC = () => {
             </p>
             <p>
               Enseignement des compétences techniques, culturelles et linguistiques
-              permettant de construire et de développer des relations d'affaires entre
-              l'Europe et l'Asie, plus précisément sur les marchés japonais, coréen et chinois.
+              permettant de construire et de développer des relations d&apos;affaires entre
+              l&apos;Europe et l&apos;Asie, plus précisément sur les marchés japonais, coréen et chinois.
               <br />
               Cours de : Japonais, Cultures asiatiques, Marketing digital & Marketing,
-              Import-Export, Comptabilité, Stratégie d'entreprise, Négociation, Droit des contrats
-              internationaux, Achat, Développement d'un Business Plan.
+              Import-Export, Comptabilité, Stratégie d&apos;entreprise, Négociation, Droit des contrats
+              internationaux, Achat, Développement d&apos;un Business Plan.
               <br />
               Organisation de la Journée Japon 2020, équipe sponsoring.
             </p>
@@ -143,7 +143,7 @@ const Experience: React.FC = () => {
             <h5>EF écoles de langue, LONDRES & SAN FRANCISCO</h5>
             <p className="date">Septembre 2017 à mai 2019</p>
             <p className="diploma">Multiple Center Academic Year Diploma (obtenu)</p>
-            <p>Cours intensif d'anglais</p>
+            <p>Cours intensif d&apos;anglais</p>
           </div>
 
           <div className="container-pro transition duration-500 transform hover:scale-120 hover:shadow-xl">

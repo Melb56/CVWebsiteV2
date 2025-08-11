@@ -2,8 +2,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/header.css';
-import Image from "next/image";
-import Link from "next/link";
 
 const Header: React.FC = () => {
   const navbarRef = useRef<HTMLElement>(null);

@@ -3,13 +3,15 @@
 import React from 'react';
 import '../styles/contact.css';
 import ContactForm from './ContactForm';
+import Image from 'next/image';
+
 
 const Contact: React.FC = () => {
   return (
     <section id="contact">
         <h1 data-aos="fade-down" data-aos-duration="1500">Contactez-moi !</h1>
         <div className='intro-contact' data-aos="fade-right" data-aos-duration="1500">
-          <p >Actuellement à la recherche d'un emploi en tant que : </p>
+          <p >Actuellement à la recherche d&apos;un emploi en tant que : </p>
           <p className='job search' >Développeuse Front-end ou Intégratrice Web.</p>   
           <div className='text-contact' ><p> Je serais ravie d’échanger avec vous de mon parcours et ma motivation.</p></div>
         </div>
@@ -17,11 +19,21 @@ const Contact: React.FC = () => {
         <div className="contact"> 
           <div className="info" data-aos="fade-right" data-aos-duration="1500">
             <div className="contact-info">
-                <img src="img/Contact/email.svg" alt="LogoEmail"/>
-                <a href="mailto:melanie.bruzac@gmail.com">melanie.bruzac@gmail.com</a>
+              <Image
+                src="img/Contact/email.svg"
+                alt="LogoEmail"
+                width={300}
+                height={300}
+              />
+              <a href="mailto:melanie.bruzac@gmail.com">melanie.bruzac@gmail.com</a>
             </div>
             <div className="contact-info">
-              <img src="img/Contact/linkedin.svg" alt="LogoLinkedin"/>
+              <Image
+                src="img/Contact/linkedin.svg"
+                alt="LogoLinkedin"
+                width={300}
+                height={300}
+              />
               <a href="https://www.linkedin.com/in/melaniebruzac">www.linkedin.com</a>
             </div>
             <div className="contact-info">

@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, MouseEvent, useEffect, useState } from "react";
+import { ReactNode, MouseEvent, useEffect, useState, useCallback } from "react";
 import "../styles/overlay.css";
 
 type OverlayProps = {
@@ -30,12 +30,12 @@ export default function Overlay({
     };
   }, [disableBodyScroll]);
 
-  const handleCloseRequest = () => {
+  const handleCloseRequest = useCallback(() => {
     setVisible(false);
     window.setTimeout(() => {
       onClose();
     }, transitionMs);
-  };
+  }, [onClose, transitionMs]);
 
 
   const handleContentClick = (e: MouseEvent<HTMLDivElement>) => {
@@ -48,7 +48,7 @@ export default function Overlay({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [handleCloseRequest]);
 
 
   return (

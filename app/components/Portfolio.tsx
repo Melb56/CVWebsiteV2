@@ -52,9 +52,9 @@ const Portfolio: React.FC = () => {
                                 <li>SASS</li>
                             </div>
                             <ul className='tasks'>
-                                <li>Elaboration d'une maquette responsive</li>
-                                <li>Developpement d'une BD avec Prisma (MySQL)</li>
-                                <li>Installation d'une authentification avec Nextauth.js</li>
+                                <li>Elaboration d&apos;une maquette responsive</li>
+                                <li>Developpement d&apos;une BD avec Prisma (MySQL)</li>
+                                <li>Installation d&apos;une authentification avec Nextauth.js</li>
                                 <li>Développement du front.</li>
                                 <li>Mise en ligne sur Vercel.</li>
                             </ul>
@@ -105,8 +105,8 @@ const Portfolio: React.FC = () => {
                             </div>
                             <ul className='tasks'>
                                 <li>Analyse des besoins</li>
-                                <li>Elaboration d'une maquette responsive</li>
-                                <li>Personnalisation complète d'un thème Wordpress</li>
+                                <li>Elaboration d&apos;une maquette responsive</li>
+                                <li>Personnalisation complète d&apos;un thème Wordpress</li>
                                 <li>Développement du front</li>
                                 <li>Mise en ligne</li>
                                 <li>Formation du client à l’interface admin</li>
@@ -161,7 +161,7 @@ const Portfolio: React.FC = () => {
                             <li>JavaScript</li>
                             </div>
                             <ul className='tasks'>
-                                <li>Elaboration d'une maquette responsive.</li>
+                                <li>Elaboration d&apos;une maquette responsive.</li>
                                 <li>Développement du front</li>
                                 <li>Mise en ligne</li>
                             </ul>
@@ -214,7 +214,7 @@ const Portfolio: React.FC = () => {
                             <li>JavaScript</li>
                             </div>
                             <ul className='tasks'>
-                                <li>Elaboration d'une maquette responsive.</li>
+                                <li>Elaboration d&apos;une maquette responsive.</li>
                                 <li>Développement du front</li>
                                 <li>Mise en ligne</li>
                             </ul>
@@ -267,7 +267,7 @@ const Portfolio: React.FC = () => {
                             <li>JavaScript</li>
                             </div>
                             <ul className='tasks'>
-                                <li>Elaboration d'une maquette responsive.</li>
+                                <li>Elaboration d&apos;une maquette responsive.</li>
                                 <li>Développement du front</li>
                                 <li>Mise en ligne</li>
                             </ul>
@@ -319,7 +319,7 @@ const Portfolio: React.FC = () => {
                                 <li>React.js</li>
                             </div>
                             <ul className='tasks'>
-                                <li>Elaboration d'une maquette responsive.</li>
+                                <li>Elaboration d&apos;une maquette responsive.</li>
                                 <li>Développement du front</li>
                                 <li>Mise en place d’une page de réservation avec la possibilité de choisir une date sur un calendrier.</li>
                             </ul>
