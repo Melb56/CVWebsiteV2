@@ -132,7 +132,7 @@ const Portfolio: React.FC = () => {
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>Bootstrap</li>
-                            <li>JavaScript</li>
+                            <li>Next.js</li>
                     </div>
                         <div className='btnPlus'>
                             <button className="see-more-btn" onClick={() => setSelectedProject("MB3")}>
