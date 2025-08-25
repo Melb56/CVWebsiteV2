@@ -158,7 +158,7 @@ const Portfolio: React.FC = () => {
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>Bootstrap</li>
-                            <li>JavaScript</li>
+                            <li>Next.js</li>
                             </div>
                             <ul className='tasks'>
                                 <li>Elaboration d&apos;une maquette responsive.</li>
@@ -167,7 +167,7 @@ const Portfolio: React.FC = () => {
                             </ul>
                             <div className="btn-projet">
                                 <button>
-                                    <a href="cv-web-site-v1.vercel.app" target="_blank" rel="noreferrer">
+                                    <a href="https://melanie-bruzac.fr/" target="_blank" rel="noreferrer">
                                         Voir le site
                                     </a>
                                 </button>
@@ -273,7 +273,7 @@ const Portfolio: React.FC = () => {
                             </ul>
                             <div className="btn-projet">
                                 <button>
-                                    <a href="cv-web-site-v1.vercel.app" target="_blank" rel="noreferrer">
+                                    <a href="https://cv-web-site-v1.vercel.app/" target="_blank" rel="noreferrer">
                                         Voir le site
                                     </a>
                                 </button>

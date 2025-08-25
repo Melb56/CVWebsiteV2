@@ -1,7 +1,7 @@
 
 import './styles/globals.css';
 import './styles/button.css';
-import './styles/linkedin.css'
+import './styles/linkedin.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';

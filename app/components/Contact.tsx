@@ -3,7 +3,6 @@
 import React from 'react';
 import '../styles/contact.css';
 import ContactForm from './ContactForm';
-import Image from 'next/image';
 
 
 const Contact: React.FC = () => {
@@ -24,11 +23,15 @@ const Contact: React.FC = () => {
             </div>
             <div className="contact-info">
               <img src="img/Contact/linkedin.svg" alt="LogoLinkedin"/>
-              <a href="https://www.linkedin.com/in/melaniebruzac">www.linkedin.com</a>
+              <a
+                href="https://www.linkedin.com/in/melaniebruzac"
+                target="_blank"
+               rel="noopener noreferrer">
+              www.linkedin.com</a>
             </div>
             <div className="contact-info">
               <img src="img/Contact/localisation.svg" alt="LogoLocalisation"/>
-              <a href="https://www.linkedin.com/in/melaniebruzac">France</a>
+              <a>France</a>
             </div>
           </div>
           <div className="form-container" data-aos="fade-left" data-aos-duration="1500">
