@@ -165,6 +165,16 @@ const Skills: React.FC = () => {
                 <p>Xampp</p>
               </div>
             </div>
+            <div className='image'>
+              <Image
+                src="/img/Skills/prisma.svg"
+                alt="Prisma"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>Prisma</p>
+              </div>
+            </div>
           </div>
         </div>
 
