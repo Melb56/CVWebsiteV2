@@ -88,6 +88,14 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
     cursor: pointer;
 }
 
+#Osteo {
+    background-image: url(/img/Portfolio/osteoCT.png); 
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;   
+    background-color: #F28284; 
+}
+
 #dailybooks {
     background-image: url(/img/Portfolio/LogoDB.png); 
     background-size: contain;
@@ -103,6 +111,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
     background-repeat: no-repeat;   
     background-color: #c8e8fa; 
 }
+
 #MB {
     background-image: url(/img/Portfolio/LogoMB2.png);
     background-size: contain;
@@ -137,6 +146,9 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
 }
 
 .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -145,7 +157,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
     box-sizing: border-box;
     border-radius: inherit;
     color: var(--color2);
-    padding: 1rem;
+    padding: 1rem; 
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease, background 0.4s ease;
@@ -165,7 +177,6 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
 .intro p {
     color: var(--color1);
     text-align: center;
-    margin: 1rem 0;
 }
 
 .tags {

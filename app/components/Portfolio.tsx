@@ -16,6 +16,61 @@ const Portfolio: React.FC = () => {
 
         <div className='card-container' data-aos="fade-right" data-aos-duration="1500">
 
+            <div className='flotti' data-category="front">
+                <div className="card" id="Osteo" >
+                    <div className="intro">
+                        <h4>Otéopathe Charlotte Tanguy</h4>
+                        <p>Site vitrine pour une ostéopathe à Locmiquélic EN COURS DE REFONTE</p>
+                        <div className='tags'>
+                            <li>Wordpress</li>
+                            <li>CSS</li> 
+                        </div>
+                        <div className='btnPlus'>
+                            <button className="see-more-btn" onClick={() => setSelectedProject("osteo")}>
+                                +
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    {selectedProject === "osteo" && (
+                        <Overlay onClose={() => setSelectedProject(null)} disableBodyScroll>
+                            <h2>Ostéopathe Charlotte Tanguy</h2>
+                            <div className='portfolio-img'>
+                                <Image
+                                    src="/img/Portfolio/osteoCT.png"
+                                    alt="Photo de profil"
+                                    width={500}
+                                    height={100}
+                                />
+                            </div>
+                            <div className='tags'>
+                                <li>Wordpress</li>
+                                <li>CSS</li> 
+                            </div>
+                            <ul className='tasks'>
+                                <li>Analyse des besoins</li>
+                                <li>Elaboration d&apos;une maquette responsive</li>
+                                <li>Personnalisation complète d&apos;un thème Wordpress</li>
+                                <li>Développement du front</li>
+                                <li>Gestion du contenu</li>
+                                <li>Hébergement</li>
+                                <li>Mise en ligne</li>
+                            </ul>
+                            <div className="btn-projet">
+                                <button>
+                                    <a href="https://flottibulle.fr/" target="_blank" rel="noreferrer">
+                                        Voir le site
+                                    </a>
+                                </button>
+                            </div>
+                        
+                        </Overlay>
+                    )}     
+                </div>
+            </div>
+            
             <div className='daily' data-category="fullstack">
                 <div className="card" id="dailybooks">
                     <div className="intro">

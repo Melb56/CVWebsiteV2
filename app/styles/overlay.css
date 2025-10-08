@@ -5,7 +5,7 @@
 .overlay-projet {
   position: fixed;
   inset: 0;
-  background: rgba(26, 26, 26, .5);
+  /* background: rgba(26, 26, 26, .5); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +25,7 @@
   opacity: 1;
   transform: scale(1);
   pointer-events: auto;
-  background: rgba(26, 26, 26, 0.5);
+  /* background:  rgba(165, 204, 255, .5); */
 }
 
 .content {

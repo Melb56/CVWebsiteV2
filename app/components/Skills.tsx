@@ -78,6 +78,16 @@ const Skills: React.FC = () => {
             </div>
             <div className='image'>
               <Image
+                src="/img/Skills/jquery.svg"
+                alt="JS"
+                width={90}
+                height={90}/>
+              <div className='overlay'>
+                <p>jQuery</p>
+              </div>
+            </div>
+            {/* <div className='image'>
+              <Image
                 src="/img/Skills/typescript.svg"
                 alt="TS"
                 width={90}
@@ -85,7 +95,7 @@ const Skills: React.FC = () => {
               <div className='overlay'>
                 <p>Typecript</p>
               </div>
-            </div>
+            </div> */}
             <div className='image'>
               <Image
                 src="/img/Skills/react.svg"
