@@ -20,7 +20,7 @@ const Portfolio: React.FC = () => {
                 <div className="card" id="Osteo" >
                     <div className="intro">
                         <h4>Otéopathe Charlotte Tanguy</h4>
-                        <p>Site vitrine pour une ostéopathe à Locmiquélic EN COURS DE REFONTE</p>
+                        <p>Refonte du site vitrine pour une ostéopathe à Locmiquélic</p>
                         <div className='tags'>
                             <li>Wordpress</li>
                             <li>CSS</li> 
@@ -60,7 +60,7 @@ const Portfolio: React.FC = () => {
                             </ul>
                             <div className="btn-projet">
                                 <button>
-                                    <a href="https://flottibulle.fr/" target="_blank" rel="noreferrer">
+                                    <a href="https://osteopathe-tanguy-locmiquelic.fr/" target="_blank" rel="noreferrer">
                                         Voir le site
                                     </a>
                                 </button>
